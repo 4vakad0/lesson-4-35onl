@@ -37,7 +37,7 @@ public class Main {
 
             }
         }
-        if (flag = true) {
+        if (flag == true) {
             System.out.println("Значений массива равных 0 нет");
         }
 
