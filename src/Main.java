@@ -21,8 +21,17 @@ public class Main {
             mas[i] = (int) (Math.random() * 100);// Меняя 100 можно увеличивать диапазон заполнения
         }
 
-        // Вывод массива
+        // Вывод массива в прямом порядке
+        System.out.print("Массив в прямом порядке: ");
         for (int i = 0; i < masSize; i++) {
+            System.out.print(mas[i] + " ");
+        }
+        System.out.println();
+
+
+        // Вывод массива в обратном порядке
+        System.out.print("Массив в обратном порядке: ");
+        for (int i = masSize - 1; i >= 0; i--) {
             System.out.print(mas[i] + " ");
         }
 
