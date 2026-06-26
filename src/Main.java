@@ -10,21 +10,37 @@ public class Main {
         int[] mas = new int[masSize];
 
         //Заполнение элементов массива вручную с консоли
-//        System.out.println("Веедите значения массива ");
-//        for (int i = 0; i < masSize; i++) {
-//            System.out.println("Введите " + (i + 1) + " значение массива:");
-//            mas[i] = scanner.nextInt();
-//        }
-        //Массив заполняется случайным образом числами от 0 до 100
-        System.out.println("Массив заполняется случайным образом числами от 0 до 100");
+        System.out.println("Веедите значения массива ");
         for (int i = 0; i < masSize; i++) {
-            mas[i] = (int) (Math.random() * 100);// Меняя 100 можно увеличивать диапазон заполнения
+            System.out.println("Введите " + (i + 1) + " значение массива:");
+            mas[i] = scanner.nextInt();
         }
+        //Массив заполняется случайным образом числами от 0 до 100
+//        System.out.println("Массив заполняется случайным образом числами от 0 до 100");
+//        for (int i = 0; i < masSize; i++) {
+//            mas[i] = (int) (Math.random() * 100);// Меняя 100 можно увеличивать диапазон заполнения
+//        }
 
         // Вывод массива
+        System.out.print("Массив: ");
         for (int i = 0; i < masSize; i++) {
             System.out.print(mas[i] + " ");
         }
+
+
+        System.out.println();
+        boolean flag = true;
+        for (int i = 0; i < masSize; i++) {
+            if (mas[i] == 0) {
+                System.out.println(i + "-е значение массива равно 0");
+                flag = false;
+
+            }
+        }
+        if (flag = true) {
+            System.out.println("Значений массива равных 0 нет");
+        }
+
 
 
 
