@@ -26,8 +26,33 @@ public class Main {
         for (int i = 0; i < masSize; i++) {
             System.out.print(mas[i] + " ");
         }
+        System.out.println();
+
+        // Поиск максимального
+        int max = 0;
+        int indexMax = 0;
+        for (int i = 0; i < masSize; i++) {
+            if (mas[i] > max) {
+                max = mas[i];
+                indexMax = i;
+            }
+        }
+        System.out.println("Максимальное значение массива: " + max);
+        System.out.println("Индекс максимального значения массива: " + indexMax);
+
+        // Поиск минимального
+        int min = max;
+        int indexMin = 0;
+        for (int i = 0; i < masSize; i++) {
+            if (mas[i] < min) {
+                min = mas[i];
+                indexMin = i;
+            }
 
 
+        }
+        System.out.println("Минимальное значение массива: " + min);
+        System.out.println("Индекс минимального значения массива: " + indexMin);
 
 
 
