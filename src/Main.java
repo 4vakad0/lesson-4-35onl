@@ -22,6 +22,7 @@ public class Main {
         }
 
         // Вывод массива
+        System.out.println("Массив:");
         for (int i = 0; i < masSize; i++) {
             System.out.print(mas[i] + " ");
         }
