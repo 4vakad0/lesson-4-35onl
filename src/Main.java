@@ -10,16 +10,16 @@ public class Main {
         int[] mas = new int[masSize];
 
         //Заполнение элементов массива вручную с консоли
-//        System.out.println("Веедите значения массива ");
-//        for (int i = 0; i < masSize; i++) {
-//            System.out.println("Введите " + (i + 1) + " значение массива:");
-//            mas[i] = scanner.nextInt();
-//        }
-        //Массив заполняется случайным образом числами от 0 до 100
-        System.out.println("Массив заполняется случайным образом числами от 0 до 100");
+        System.out.println("Веедите значения массива ");
         for (int i = 0; i < masSize; i++) {
-            mas[i] = (int) (Math.random() * 100);// Меняя 100 можно увеличивать диапазон заполнения
+            System.out.println("Введите " + (i + 1) + " значение массива:");
+            mas[i] = scanner.nextInt();
         }
+        //Массив заполняется случайным образом числами от 0 до 100
+//        System.out.println("Массив заполняется случайным образом числами от 0 до 100");
+//        for (int i = 0; i < masSize; i++) {
+//            mas[i] = (int) (Math.random() * 100);// Меняя 100 можно увеличивать диапазон заполнения
+//        }
 
         // Вывод массива
         System.out.println("Массив:");
@@ -27,9 +27,23 @@ public class Main {
             System.out.print(mas[i] + " ");
         }
 
+        boolean isIncrease = true;
+        for (int i = 1; i < masSize; i++) {
+            if (mas[i] <= mas[i - 1]) {
+                isIncrease = false;
+                break;
+            }
+        }
+        if (isIncrease){
+            System.out.println("Массив является возрастающим.");
+        }else {
+            System.out.println("Массив не является возрастающим.");
+            }
+        }
 
 
 
 
-    }
+
+
 }
