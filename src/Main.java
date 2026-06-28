@@ -10,16 +10,16 @@ public class Main {
         int[] mas = new int[masSize];
 
         //Заполнение элементов массива вручную с консоли
-//        System.out.println("Веедите значения массива ");
-//        for (int i = 0; i < masSize; i++) {
-//            System.out.println("Введите " + (i + 1) + " значение массива:");
-//            mas[i] = scanner.nextInt();
-//        }
-        //Массив заполняется случайным образом числами от 0 до 100
-        System.out.println("Массив заполняется случайным образом числами от 0 до 100");
+        System.out.println("Веедите значения массива ");
         for (int i = 0; i < masSize; i++) {
-            mas[i] = (int) (Math.random() * 100);// Меняя 100 можно увеличивать диапазон заполнения
+            System.out.println("Введите " + (i + 1) + " значение массива:");
+            mas[i] = scanner.nextInt();
         }
+        //Массив заполняется случайным образом числами от 0 до 100
+//        System.out.println("Массив заполняется случайным образом числами от 0 до 100");
+//        for (int i = 0; i < masSize; i++) {
+//            mas[i] = (int) (Math.random() * 10);// Меняя 100 можно увеличивать диапазон заполнения
+//        }
 
         // Вывод массива
         System.out.println("Массив:");
@@ -27,9 +27,35 @@ public class Main {
             System.out.print(mas[i] + " ");
         }
 
+        // Преобразуем массив в число
+        System.out.println();
+        int result = 0;
+        for (int i = 0; i < masSize; i++) {
+        result = result * 10 + mas[i];
+        }
+        System.out.println(result);
 
+        // Прибовляем единицу
+        int resultPlusOne = result + 1;
 
+        // Преобразуем получившееся число в массив
+        int nomber = resultPlusOne;
+        int  newMasSize = 0;
+        while (nomber > 0) {
+            nomber /= 10;
+            newMasSize++;
+        }
 
-
+        int[] newMas = new int[newMasSize];
+        nomber = resultPlusOne;
+        for (int i = newMasSize - 1; i >= 0; i--) {
+            newMas[i] = nomber % 10;
+            nomber /= 10;
+        }
+        System.out.println("Массив + 1: ");
+        for (int i = 0; i < newMasSize; i++) {
+            System.out.print(newMas[i] + " ");
+        }
     }
+
 }
